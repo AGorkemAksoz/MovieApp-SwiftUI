@@ -11,6 +11,11 @@
 		DE0D98062C0DDCBD00C0DC89 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0D98052C0DDCBD00C0DC89 /* ContentView.swift */; };
 		DE0D98082C0DDCBF00C0DC89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE0D98072C0DDCBF00C0DC89 /* Assets.xcassets */; };
 		DE0D980B2C0DDCBF00C0DC89 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE0D980A2C0DDCBF00C0DC89 /* Preview Assets.xcassets */; };
+		DE0D98182C0E009A00C0DC89 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0D98172C0E009A00C0DC89 /* APIHelper.swift */; };
+		DE0D981A2C0E014700C0DC89 /* UserEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0D98192C0E014700C0DC89 /* UserEndpoint.swift */; };
+		DE0D981C2C0E02AE00C0DC89 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0D981B2C0E02AE00C0DC89 /* APIClient.swift */; };
+		DE0D981F2C0E0BBD00C0DC89 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0D981E2C0E0BBD00C0DC89 /* Post.swift */; };
+		DE0D98222C0E0C5300C0DC89 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0D98212C0E0C5300C0DC89 /* PostService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		DE0D98052C0DDCBD00C0DC89 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DE0D98072C0DDCBF00C0DC89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE0D980A2C0DDCBF00C0DC89 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DE0D98172C0E009A00C0DC89 /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
+		DE0D98192C0E014700C0DC89 /* UserEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEndpoint.swift; sourceTree = "<group>"; };
+		DE0D981B2C0E02AE00C0DC89 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		DE0D981E2C0E0BBD00C0DC89 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		DE0D98212C0E0C5300C0DC89 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +61,9 @@
 		DE0D98022C0DDCBD00C0DC89 /* MovieApp-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				DE0D98202C0E0C4900C0DC89 /* Service */,
+				DE0D981D2C0E0B7C00C0DC89 /* Model */,
+				DE0D98162C0E009100C0DC89 /* Network */,
 				DE0D98032C0DDCBD00C0DC89 /* MovieApp_SwiftUIApp.swift */,
 				DE0D98052C0DDCBD00C0DC89 /* ContentView.swift */,
 				DE0D98072C0DDCBF00C0DC89 /* Assets.xcassets */,
@@ -65,6 +78,32 @@
 				DE0D980A2C0DDCBF00C0DC89 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DE0D98162C0E009100C0DC89 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DE0D98172C0E009A00C0DC89 /* APIHelper.swift */,
+				DE0D98192C0E014700C0DC89 /* UserEndpoint.swift */,
+				DE0D981B2C0E02AE00C0DC89 /* APIClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DE0D981D2C0E0B7C00C0DC89 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE0D981E2C0E0BBD00C0DC89 /* Post.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE0D98202C0E0C4900C0DC89 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DE0D98212C0E0C5300C0DC89 /* PostService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +176,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE0D98182C0E009A00C0DC89 /* APIHelper.swift in Sources */,
+				DE0D981A2C0E014700C0DC89 /* UserEndpoint.swift in Sources */,
+				DE0D98222C0E0C5300C0DC89 /* PostService.swift in Sources */,
 				DE0D98062C0DDCBD00C0DC89 /* ContentView.swift in Sources */,
+				DE0D981F2C0E0BBD00C0DC89 /* Post.swift in Sources */,
+				DE0D981C2C0E02AE00C0DC89 /* APIClient.swift in Sources */,
 				DE0D98042C0DDCBD00C0DC89 /* MovieApp_SwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
