@@ -17,6 +17,10 @@
 		DE0D981F2C0E0BBD00C0DC89 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0D981E2C0E0BBD00C0DC89 /* Post.swift */; };
 		DE0D98222C0E0C5300C0DC89 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0D98212C0E0C5300C0DC89 /* PostService.swift */; };
 		DE11845B2C0F2B6700B04C18 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE11845A2C0F2B6700B04C18 /* PostViewModel.swift */; };
+		DE1184612C0F416600B04C18 /* MovieEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1184602C0F416600B04C18 /* MovieEndpoint.swift */; };
+		DE1184632C0F41AD00B04C18 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1184622C0F41AD00B04C18 /* Movie.swift */; };
+		DE1184662C0F445700B04C18 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1184652C0F445700B04C18 /* MovieService.swift */; };
+		DE1184682C0F467300B04C18 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1184672C0F467300B04C18 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		DE0D981E2C0E0BBD00C0DC89 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		DE0D98212C0E0C5300C0DC89 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		DE11845A2C0F2B6700B04C18 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		DE1184602C0F416600B04C18 /* MovieEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieEndpoint.swift; sourceTree = "<group>"; };
+		DE1184622C0F41AD00B04C18 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		DE1184652C0F445700B04C18 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
+		DE1184672C0F467300B04C18 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,7 @@
 				DE0D98072C0DDCBF00C0DC89 /* Assets.xcassets */,
 				DE0D98092C0DDCBF00C0DC89 /* Preview Content */,
 				DE11845A2C0F2B6700B04C18 /* PostViewModel.swift */,
+				DE1184672C0F467300B04C18 /* HomeViewModel.swift */,
 			);
 			path = "MovieApp-SwiftUI";
 			sourceTree = "<group>";
@@ -90,6 +99,7 @@
 				DE0D98172C0E009A00C0DC89 /* APIHelper.swift */,
 				DE0D98192C0E014700C0DC89 /* UserEndpoint.swift */,
 				DE0D981B2C0E02AE00C0DC89 /* APIClient.swift */,
+				DE1184602C0F416600B04C18 /* MovieEndpoint.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -98,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				DE0D981E2C0E0BBD00C0DC89 /* Post.swift */,
+				DE1184622C0F41AD00B04C18 /* Movie.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -106,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				DE0D98212C0E0C5300C0DC89 /* PostService.swift */,
+				DE1184652C0F445700B04C18 /* MovieService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -215,10 +227,14 @@
 				DE0D98182C0E009A00C0DC89 /* APIHelper.swift in Sources */,
 				DE0D981A2C0E014700C0DC89 /* UserEndpoint.swift in Sources */,
 				DE0D98222C0E0C5300C0DC89 /* PostService.swift in Sources */,
+				DE1184632C0F41AD00B04C18 /* Movie.swift in Sources */,
 				DE0D98062C0DDCBD00C0DC89 /* ContentView.swift in Sources */,
 				DE0D981F2C0E0BBD00C0DC89 /* Post.swift in Sources */,
+				DE1184682C0F467300B04C18 /* HomeViewModel.swift in Sources */,
 				DE0D981C2C0E02AE00C0DC89 /* APIClient.swift in Sources */,
 				DE0D98042C0DDCBD00C0DC89 /* MovieApp_SwiftUIApp.swift in Sources */,
+				DE1184612C0F416600B04C18 /* MovieEndpoint.swift in Sources */,
+				DE1184662C0F445700B04C18 /* MovieService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

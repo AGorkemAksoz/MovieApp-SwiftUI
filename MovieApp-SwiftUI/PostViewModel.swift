@@ -24,7 +24,7 @@ class PostViewModel: ObservableObject {
                 
             } receiveValue: { [ weak self] data in
                 self?.posts = data
-                print(self?.posts)
+//                print(self?.posts)
             }
             .store(in: &cancellables)
 

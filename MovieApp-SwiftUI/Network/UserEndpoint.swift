@@ -44,4 +44,11 @@ enum UserEndpoint: APIEndpoint {
         }
     }
     
+    var url: URL? {
+        switch self {
+        case .getUsers:
+            return nil
+        }
+    }
+    
 }

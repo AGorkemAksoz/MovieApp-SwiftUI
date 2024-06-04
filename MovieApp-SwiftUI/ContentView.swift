@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var viewModel = PostViewModel(postService: PostService())
+    @StateObject var postViewModel = PostViewModel(postService: PostService())
+    @StateObject var viewModel = HomeViewModel(movieService: MovieService())
     
     var body: some View {
         
+        VStack {
+            Text("Placeholder")
             ScrollView {
                 LazyVStack {
-                    ForEach(viewModel.posts, id: \.id ) { post in
-                        Text(post.title)
+                    ForEach(viewModel.movies, id: \.id ) { movie in
+                        Text(movie.originalTitle!)
                             .padding(.bottom, 8)
 
                         Divider()
@@ -23,8 +26,9 @@ struct ContentView: View {
                 }
             }
         .padding()
+        }
         .onAppear {
-            viewModel.fetchPosts()
+            viewModel.fetchMovies()
         }
     }
 }

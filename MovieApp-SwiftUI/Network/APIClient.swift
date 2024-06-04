@@ -16,13 +16,15 @@ protocol APIClientInterface {
 
 class APIClient<EndpointType: APIEndpoint>: APIClientInterface {
     func request<T>(_ endpoint: EndpointType) -> AnyPublisher<T, Error> where T : Decodable {
-        let url = endpoint.baseURL.appendingPathComponent(endpoint.path)
-        var request = URLRequest(url: url)
-        request.httpMethod = endpoint.method.rawValue
+        var urlRequest = URLRequest(url: endpoint.url!)
+                urlRequest.httpMethod = endpoint.method.rawValue
+                if let headers = endpoint.headers {
+                    for (key, value) in headers {
+                        urlRequest.addValue(value, forHTTPHeaderField: key)
+                    }
+                }
         
-        endpoint.headers?.forEach{ request.addValue($0.value, forHTTPHeaderField: $0.key)}
-        
-        return URLSession.shared.dataTaskPublisher(for: request)
+        return URLSession.shared.dataTaskPublisher(for: urlRequest)
             .subscribe(on: DispatchQueue.global(qos: .background))
             .tryMap { data, response -> Data in
                 guard let httpResponse = response as? HTTPURLResponse,
