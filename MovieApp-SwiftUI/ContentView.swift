@@ -8,14 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModel = PostViewModel(postService: PostService())
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
+        
+            ScrollView {
+                LazyVStack {
+                    ForEach(viewModel.posts, id: \.id ) { post in
+                        Text(post.title)
+                            .padding(.bottom, 8)
+
+                        Divider()
+                    }
+                }
+            }
         .padding()
+        .onAppear {
+            viewModel.fetchPosts()
+        }
     }
 }
 

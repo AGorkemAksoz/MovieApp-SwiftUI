@@ -16,6 +16,7 @@
 		DE0D981C2C0E02AE00C0DC89 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0D981B2C0E02AE00C0DC89 /* APIClient.swift */; };
 		DE0D981F2C0E0BBD00C0DC89 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0D981E2C0E0BBD00C0DC89 /* Post.swift */; };
 		DE0D98222C0E0C5300C0DC89 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0D98212C0E0C5300C0DC89 /* PostService.swift */; };
+		DE11845B2C0F2B6700B04C18 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE11845A2C0F2B6700B04C18 /* PostViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		DE0D981B2C0E02AE00C0DC89 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		DE0D981E2C0E0BBD00C0DC89 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		DE0D98212C0E0C5300C0DC89 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		DE11845A2C0F2B6700B04C18 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		DE0D98022C0DDCBD00C0DC89 /* MovieApp-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				DE11845F2C0F2C9500B04C18 /* Utilities */,
 				DE0D98202C0E0C4900C0DC89 /* Service */,
 				DE0D981D2C0E0B7C00C0DC89 /* Model */,
 				DE0D98162C0E009100C0DC89 /* Network */,
@@ -68,6 +71,7 @@
 				DE0D98052C0DDCBD00C0DC89 /* ContentView.swift */,
 				DE0D98072C0DDCBF00C0DC89 /* Assets.xcassets */,
 				DE0D98092C0DDCBF00C0DC89 /* Preview Content */,
+				DE11845A2C0F2B6700B04C18 /* PostViewModel.swift */,
 			);
 			path = "MovieApp-SwiftUI";
 			sourceTree = "<group>";
@@ -104,6 +108,37 @@
 				DE0D98212C0E0C5300C0DC89 /* PostService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		DE11845C2C0F2C8300B04C18 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DE11845E2C0F2C8E00B04C18 /* ViewModel */,
+				DE11845D2C0F2C8B00B04C18 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DE11845D2C0F2C8B00B04C18 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DE11845E2C0F2C8E00B04C18 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DE11845F2C0F2C9500B04C18 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DE11845C2C0F2C8300B04C18 /* Home */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE11845B2C0F2B6700B04C18 /* PostViewModel.swift in Sources */,
 				DE0D98182C0E009A00C0DC89 /* APIHelper.swift in Sources */,
 				DE0D981A2C0E014700C0DC89 /* UserEndpoint.swift in Sources */,
 				DE0D98222C0E0C5300C0DC89 /* PostService.swift in Sources */,
