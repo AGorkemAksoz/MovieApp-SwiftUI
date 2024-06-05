@@ -8,7 +8,7 @@
 import Foundation
 
 enum MovieEndpoint: APIEndpoint {
-    case getMovies
+    case getMovies(page: Int)
     
     var baseURL: URL {
         return URL(string: "https://api.themoviedb.org/3")!
@@ -45,11 +45,11 @@ enum MovieEndpoint: APIEndpoint {
     var url: URL? {
         var components = URLComponents(url: baseURL.appendingPathComponent(path), resolvingAgainstBaseURL: false)!
         switch self {
-        case .getMovies:
+        case .getMovies(let page):
             components.queryItems = [
                 URLQueryItem(name: "api_key", value: "1f4cd44a27f52e7c527fa1a39efc8c2d"),
                 URLQueryItem(name: "language", value: "en-US"),
-                URLQueryItem(name: "page", value: "1")
+                URLQueryItem(name: "page", value: "\(page)")
             ]
         }
         return components.url!

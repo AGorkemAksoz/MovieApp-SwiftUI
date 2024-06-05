@@ -21,6 +21,10 @@
 		DE1184632C0F41AD00B04C18 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1184622C0F41AD00B04C18 /* Movie.swift */; };
 		DE1184662C0F445700B04C18 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1184652C0F445700B04C18 /* MovieService.swift */; };
 		DE1184682C0F467300B04C18 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1184672C0F467300B04C18 /* HomeViewModel.swift */; };
+		DE11846B2C108F2900B04C18 /* SwiftUIIntrospect in Frameworks */ = {isa = PBXBuildFile; productRef = DE11846A2C108F2900B04C18 /* SwiftUIIntrospect */; };
+		DE11846D2C108F2900B04C18 /* SwiftUIIntrospect-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = DE11846C2C108F2900B04C18 /* SwiftUIIntrospect-Dynamic */; };
+		DE11846F2C108F2900B04C18 /* SwiftUIIntrospect-Static in Frameworks */ = {isa = PBXBuildFile; productRef = DE11846E2C108F2900B04C18 /* SwiftUIIntrospect-Static */; };
+		DE1184712C10A5A200B04C18 /* DetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1184702C10A5A200B04C18 /* DetailPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +43,7 @@
 		DE1184622C0F41AD00B04C18 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		DE1184652C0F445700B04C18 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		DE1184672C0F467300B04C18 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		DE1184702C10A5A200B04C18 /* DetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +51,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE11846B2C108F2900B04C18 /* SwiftUIIntrospect in Frameworks */,
+				DE11846D2C108F2900B04C18 /* SwiftUIIntrospect-Dynamic in Frameworks */,
+				DE11846F2C108F2900B04C18 /* SwiftUIIntrospect-Static in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +63,7 @@
 		DE0D97F72C0DDCBD00C0DC89 = {
 			isa = PBXGroup;
 			children = (
+				DE1184702C10A5A200B04C18 /* DetailPage.swift */,
 				DE0D98022C0DDCBD00C0DC89 /* MovieApp-SwiftUI */,
 				DE0D98012C0DDCBD00C0DC89 /* Products */,
 			);
@@ -169,6 +178,11 @@
 			dependencies = (
 			);
 			name = "MovieApp-SwiftUI";
+			packageProductDependencies = (
+				DE11846A2C108F2900B04C18 /* SwiftUIIntrospect */,
+				DE11846C2C108F2900B04C18 /* SwiftUIIntrospect-Dynamic */,
+				DE11846E2C108F2900B04C18 /* SwiftUIIntrospect-Static */,
+			);
 			productName = "MovieApp-SwiftUI";
 			productReference = DE0D98002C0DDCBD00C0DC89 /* MovieApp-SwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -197,6 +211,9 @@
 				Base,
 			);
 			mainGroup = DE0D97F72C0DDCBD00C0DC89;
+			packageReferences = (
+				DE1184692C108F2800B04C18 /* XCRemoteSwiftPackageReference "swiftui-introspect" */,
+			);
 			productRefGroup = DE0D98012C0DDCBD00C0DC89 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -235,6 +252,7 @@
 				DE0D98042C0DDCBD00C0DC89 /* MovieApp_SwiftUIApp.swift in Sources */,
 				DE1184612C0F416600B04C18 /* MovieEndpoint.swift in Sources */,
 				DE1184662C0F445700B04C18 /* MovieService.swift in Sources */,
+				DE1184712C10A5A200B04C18 /* DetailPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +458,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DE1184692C108F2800B04C18 /* XCRemoteSwiftPackageReference "swiftui-introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/swiftui-introspect.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DE11846A2C108F2900B04C18 /* SwiftUIIntrospect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE1184692C108F2800B04C18 /* XCRemoteSwiftPackageReference "swiftui-introspect" */;
+			productName = SwiftUIIntrospect;
+		};
+		DE11846C2C108F2900B04C18 /* SwiftUIIntrospect-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE1184692C108F2800B04C18 /* XCRemoteSwiftPackageReference "swiftui-introspect" */;
+			productName = "SwiftUIIntrospect-Dynamic";
+		};
+		DE11846E2C108F2900B04C18 /* SwiftUIIntrospect-Static */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE1184692C108F2800B04C18 /* XCRemoteSwiftPackageReference "swiftui-introspect" */;
+			productName = "SwiftUIIntrospect-Static";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DE0D97F82C0DDCBD00C0DC89 /* Project object */;
 }
