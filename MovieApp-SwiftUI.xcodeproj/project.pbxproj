@@ -80,16 +80,14 @@
 		DE0D98022C0DDCBD00C0DC89 /* MovieApp-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				DE11845F2C0F2C9500B04C18 /* Utilities */,
+				DE1184722C11CB6F00B04C18 /* Views */,
 				DE0D98202C0E0C4900C0DC89 /* Service */,
 				DE0D981D2C0E0B7C00C0DC89 /* Model */,
 				DE0D98162C0E009100C0DC89 /* Network */,
 				DE0D98032C0DDCBD00C0DC89 /* MovieApp_SwiftUIApp.swift */,
-				DE0D98052C0DDCBD00C0DC89 /* ContentView.swift */,
 				DE0D98072C0DDCBF00C0DC89 /* Assets.xcassets */,
 				DE0D98092C0DDCBF00C0DC89 /* Preview Content */,
 				DE11845A2C0F2B6700B04C18 /* PostViewModel.swift */,
-				DE1184672C0F467300B04C18 /* HomeViewModel.swift */,
 			);
 			path = "MovieApp-SwiftUI";
 			sourceTree = "<group>";
@@ -143,6 +141,7 @@
 		DE11845D2C0F2C8B00B04C18 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DE0D98052C0DDCBD00C0DC89 /* ContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -150,16 +149,17 @@
 		DE11845E2C0F2C8E00B04C18 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DE1184672C0F467300B04C18 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		DE11845F2C0F2C9500B04C18 /* Utilities */ = {
+		DE1184722C11CB6F00B04C18 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				DE11845C2C0F2C8300B04C18 /* Home */,
 			);
-			path = Utilities;
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

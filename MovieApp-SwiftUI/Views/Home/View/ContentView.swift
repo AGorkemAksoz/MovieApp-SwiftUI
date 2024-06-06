@@ -16,11 +16,9 @@ struct ContentView: View {
     var body: some View {
         
         NavigationView {
-            VStack {
-                Text("Placeholder")
                 ScrollView {
                     ScrollViewReader { scrollViewProxy in
-                        VStack {
+                        LazyVStack {
                             ForEach(viewModel.movies, id: \.id ) { movie in
                                 NavigationLink {
                                     DetailPage(movie: movie)
@@ -44,7 +42,6 @@ struct ContentView: View {
                     delegate.viewModel = viewModel
                 })
             .padding()
-            }
             .onAppear {
                 viewModel.fetchMovies()
             }

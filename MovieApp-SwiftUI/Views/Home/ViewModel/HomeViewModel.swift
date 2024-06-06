@@ -13,6 +13,7 @@ class HomeViewModel: ObservableObject {
     let movieService: MovieServiceInterface
     @Published var movies: [MovieResult] = []
     @Published var page: Int = 1
+    @Published var positionId: Int = 20
     
     init(movieService: MovieServiceInterface) {
         self.movieService = movieService
@@ -35,7 +36,7 @@ class HomeViewModel: ObservableObject {
             .sink { data in
                 
             } receiveValue: { [weak self] data in
-                self?.movies.append(contentsOf: data.results!)
+                self?.movies.insert(contentsOf: data.results!, at: 0)
             }
             .store(in: &cancellables)
 
